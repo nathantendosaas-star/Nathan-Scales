@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="25 20 147 80">
+  <g fill="#000000">
+    <!-- X -->
+    <path d="M30 20 L55 20 L95 100 L70 100 Z" />
+    <path d="M90 20 L80 20 L30 100 L40 100 Z" />
+    <path d="M25 20 L60 20 L60 24 L25 24 Z" />
+    <path d="M65 96 L100 96 L100 100 L65 100 Z" />
+    <path d="M25 96 L50 96 L50 100 L25 100 Z" />
+    <path d="M75 20 L100 20 L100 24 L75 24 Z" />
+
+    <!-- First I -->
+    <rect x="110" y="20" width="12" height="80" />
+    <rect x="100" y="20" width="32" height="4" />
+    <rect x="100" y="96" width="32" height="4" />
+
+    <!-- Second I -->
+    <rect x="150" y="20" width="12" height="80" />
+    <rect x="140" y="20" width="32" height="4" />
+    <rect x="140" y="96" width="32" height="4" />
+  </g>
+</svg>
