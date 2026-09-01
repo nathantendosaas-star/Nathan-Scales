@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&family=Syne:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-studio-black: #0A0A0A;
+  --color-studio-dark: #1A1A1A;
+  --color-studio-gray: #A3A3A3;
+  --color-studio-offwhite: #F5F5F2;
+}
+
+/* Custom scrollbar & selection */
+::selection {
+  background-color: #ffffff;
+  color: #0a0a0a;
 }
 
 /* Lenis handles smooth scrolling natively */
@@ -23,3 +34,4 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
