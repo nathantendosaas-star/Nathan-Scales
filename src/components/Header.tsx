@@ -28,14 +28,21 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         <button
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-3 text-left focus:outline-none"
+          className="flex items-center gap-3 text-left focus:outline-none cursor-pointer group"
         >
-          <span className="font-display text-xl font-bold tracking-tight text-[#0F172A] uppercase">
-            Nathan Scales
-          </span>
-          <span className="text-[11px] font-sans font-medium uppercase tracking-wider px-2.5 py-0.5 bg-[#F1F5F9] text-[#475569] rounded-full border border-[#E2E8F0]">
-            Studio
-          </span>
+          <img
+            src="/logo.svg"
+            alt="Nathan Scales Logo"
+            className="h-7 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+          />
+          <div className="flex items-center gap-2">
+            <span className="font-display text-lg font-bold tracking-tight text-[#0F172A] uppercase">
+              Nathan Scales
+            </span>
+            <span className="text-[10px] font-sans font-medium uppercase tracking-wider px-2 py-0.5 bg-[#F1F5F9] text-[#475569] rounded-full border border-[#E2E8F0]">
+              Studio
+            </span>
+          </div>
         </button>
 
         {/* Desktop Navigation */}
@@ -59,10 +66,9 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
         <div className="hidden md:flex items-center">
           <button
             onClick={onOpenForm}
-            className="inline-flex items-center justify-center px-5 py-2.5 bg-[#0F172A] text-white text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-[#1E293B] transition-all duration-200 cursor-pointer shadow-sm"
+            className="inline-flex items-center justify-center px-5 py-2.5 bg-[#0F172A] text-white text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-[#1E293B] transition-all duration-200 cursor-pointer"
           >
-            <span>Start a Project</span>
-            <span className="ml-2">→</span>
+            Start a Project
           </button>
         </div>
 
@@ -106,7 +112,7 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
               }}
               className="w-full py-3 bg-[#0F172A] text-white text-xs uppercase font-semibold tracking-wider rounded-md text-center"
             >
-              Start a Project →
+              Start a Project
             </button>
           </div>
         </div>

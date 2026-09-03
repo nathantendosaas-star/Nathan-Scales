@@ -54,90 +54,78 @@ export default function ServicesPage({ onOpenForm }: ServicesPageProps) {
   ];
 
   return (
-    <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-12 md:py-20 space-y-16">
+    <div className="max-w-[1300px] mx-auto px-6 md:px-12 py-10 md:py-16 space-y-12">
       {/* Page Header */}
-      <div className="max-w-3xl space-y-4">
+      <div className="max-w-3xl space-y-3">
         <span className="text-xs font-bold uppercase tracking-widest text-[#64748B]">
-          Capabilities & Solutions
+          Capabilities
         </span>
         <h1 className="font-display text-4xl sm:text-5xl font-bold text-[#0F172A] tracking-tight">
-          Services & Technical Execution
+          Services
         </h1>
         <p className="text-base sm:text-lg text-[#475569] leading-relaxed">
-          Three interconnected capabilities structured to work as a unified commercial growth engine.
+          Digital studio capabilities designed to make your business easier to understand, trust, and scale.
         </p>
       </div>
 
-      {/* Accordion / Detailed Service List */}
-      <div className="space-y-6">
+      {/* Editorial Service Rows */}
+      <div className="border-t border-[#E2E8F0]">
         {services.map((service) => (
           <div
             key={service.id}
-            className={`border rounded-2xl transition-all duration-200 ${
-              activeService === service.id
-                ? "bg-white border-[#CBD5E1] shadow-md"
-                : "bg-white border-[#E2E8F0] hover:border-[#CBD5E1]"
-            }`}
+            className="py-10 border-b border-[#E2E8F0] transition-colors"
           >
-            <button
-              onClick={() => setActiveService(activeService === service.id ? null : service.id)}
-              className="w-full p-6 md:p-8 text-left flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer"
-            >
-              <div className="flex items-start md:items-center gap-6">
-                <span className="text-sm font-bold text-[#94A3B8] pt-1 md:pt-0">{service.number}</span>
-                <div>
-                  <h2 className="font-display text-xl md:text-2xl font-bold text-[#0F172A]">{service.title}</h2>
-                  <p className="text-sm text-[#475569] mt-1">{service.tagline}</p>
-                </div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              {/* Service Number & Header */}
+              <div className="lg:col-span-4 space-y-3">
+                <span className="text-sm font-mono font-bold text-[#94A3B8]">{service.number}</span>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0F172A]">
+                  {service.title}
+                </h2>
+                <p className="text-sm font-medium text-[#475569] leading-relaxed">
+                  {service.tagline}
+                </p>
               </div>
-              <div className="flex items-center gap-3 self-end md:self-auto text-xs font-semibold text-[#0F172A]">
-                <span>{activeService === service.id ? "Hide Details" : "View Details"}</span>
-                <span className="text-lg">{activeService === service.id ? "−" : "+"}</span>
-              </div>
-            </button>
 
-            {activeService === service.id && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="px-6 pb-8 md:px-8 border-t border-[#F1F5F9]"
-              >
-                <div className="pt-6 grid grid-cols-1 md:grid-cols-12 gap-8">
-                  <div className="md:col-span-6 space-y-3">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">Overview</h3>
-                    <p className="text-sm text-[#334155] leading-relaxed">{service.description}</p>
-                  </div>
-                  <div className="md:col-span-6 space-y-3">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">Key Deliverables</h3>
-                    <ul className="space-y-2">
-                      {service.deliverables.map((item, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-xs font-medium text-[#334155]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+              {/* Description & Deliverables */}
+              <div className="lg:col-span-8 space-y-6">
+                <p className="text-sm text-[#334155] leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="space-y-3 pt-2">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                    Capabilities & Deliverables
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {service.deliverables.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="p-3 bg-white border border-[#E2E8F0] rounded-md text-xs font-medium text-[#334155] flex items-center gap-2"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A] flex-shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </motion.div>
-            )}
+              </div>
+            </div>
           </div>
         ))}
       </div>
 
-      {/* CTA Box */}
-      <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <h2 className="font-display text-2xl font-bold text-[#0F172A]">Need a custom solution tailored to your business?</h2>
-          <p className="text-sm text-[#475569] mt-1">We can discuss scope, timelines, and technical requirements.</p>
+      {/* Direct CTA Block */}
+      <div className="bg-[#0F172A] text-white rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="space-y-2 max-w-xl">
+          <h2 className="font-display text-2xl font-bold text-white">Have a project that needs executing?</h2>
+          <p className="text-sm text-[#94A3B8]">Share your parameters and we will discuss scope, timeline, and requirements.</p>
         </div>
         <button
           onClick={onOpenForm}
-          className="px-6 py-3 bg-[#0F172A] text-white text-xs font-semibold uppercase tracking-wider rounded-lg hover:bg-[#1E293B] transition-colors whitespace-nowrap cursor-pointer"
+          className="px-7 py-3.5 bg-white text-[#0F172A] text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-[#F8FAFC] transition-colors whitespace-nowrap cursor-pointer"
         >
-          Start a Project →
+          Start a Project
         </button>
       </div>
     </div>

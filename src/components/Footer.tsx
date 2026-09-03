@@ -10,13 +10,16 @@ export default function Footer({ setActiveTab, onOpenForm }: FooterProps) {
   };
 
   return (
-    <footer className="border-t border-[#E2E8F0] bg-[#FFFFFF] py-14">
-      <div className="max-w-[1300px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div>
-          <div className="font-display font-bold text-lg text-[#0F172A] uppercase tracking-wider">
-            Nathan Scales
+    <footer className="border-t border-[#E2E8F0] bg-[#FFFFFF] py-10">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div className="space-y-2">
+          <div className="flex items-center gap-2.5">
+            <img src="/logo.svg" alt="Nathan Scales Logo" className="h-6 w-auto object-contain" />
+            <span className="font-display font-bold text-base text-[#0F172A] uppercase tracking-wider">
+              Nathan Scales
+            </span>
           </div>
-          <p className="text-xs text-[#64748B] mt-1 max-w-sm leading-relaxed font-normal">
+          <p className="text-xs text-[#64748B] max-w-sm leading-relaxed font-normal">
             Digital Studio — High-Converting Websites, Growth Funnels & Custom Business Software
           </p>
         </div>
