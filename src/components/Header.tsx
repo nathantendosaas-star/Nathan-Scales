@@ -31,9 +31,9 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
           className="flex items-center gap-3 text-left focus:outline-none cursor-pointer group"
         >
           <img
-            src="/logo.svg"
+            src="/NSM-logo.svg"
             alt="Nathan Scales Logo"
-            className="h-7 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+            className="h-8 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
           />
           <div className="flex items-center gap-2">
             <span className="font-display text-lg font-bold tracking-tight text-[#0F172A] uppercase">

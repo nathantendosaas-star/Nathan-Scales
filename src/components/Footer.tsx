@@ -14,7 +14,7 @@ export default function Footer({ setActiveTab, onOpenForm }: FooterProps) {
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div className="space-y-2">
           <div className="flex items-center gap-2.5">
-            <img src="/logo.svg" alt="Nathan Scales Logo" className="h-6 w-auto object-contain" />
+            <img src="/NSM-logo.svg" alt="Nathan Scales Logo" className="h-7 w-auto object-contain" />
             <span className="font-display font-bold text-base text-[#0F172A] uppercase tracking-wider">
               Nathan Scales
             </span>
