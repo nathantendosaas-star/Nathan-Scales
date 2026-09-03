@@ -90,61 +90,172 @@ export default function WorkPage({ onOpenForm }: WorkPageProps) {
         ))}
       </div>
 
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {filteredProjects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-white border border-[#E2E8F0] rounded-2xl p-8 space-y-6 flex flex-col justify-between hover:border-[#CBD5E1] hover:shadow-lg transition-all"
-          >
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold px-2.5 py-1 bg-[#F1F5F9] text-[#475569] rounded-full uppercase tracking-wider">
-                  {project.categoryLabel}
-                </span>
-              </div>
-              <h2 className="font-display text-2xl font-bold text-[#0F172A]">
-                {project.title}
-              </h2>
-              <p className="text-sm text-[#475569] leading-relaxed">
-                {project.description}
-              </p>
+      {/* Featured Visual Hierarchy Layout */}
+      {filter === 'all' ? (
+        <div className="space-y-8">
+          {/* Featured Dominant Project 1 */}
+          <div className="bg-white border border-[#E2E8F0] rounded-xl overflow-hidden hover:border-[#CBD5E1] transition-all">
+            <div className="p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-6 space-y-5">
+                <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-[#F1F5F9] text-[#475569] rounded-md text-xs font-semibold uppercase tracking-wider">
+                  <span>Featured Case Study</span>
+                  <span>•</span>
+                  <span>{projects[0].categoryLabel}</span>
+                </div>
 
-              <div className="pt-4 space-y-2">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">Key Deliverables</h3>
-                <ul className="space-y-1.5">
-                  {project.deliverables.map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-xs text-[#334155]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
-                      <span>{item}</span>
-                    </li>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0F172A]">
+                  {projects[0].title}
+                </h2>
+
+                <p className="text-sm text-[#475569] leading-relaxed">
+                  {projects[0].description}
+                </p>
+
+                <div className="space-y-2 pt-2">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">Deliverables</h3>
+                  <div className="space-y-1.5">
+                    {projects[0].deliverables.map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs font-medium text-[#334155]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-2 flex flex-wrap gap-2">
+                  {projects[0].stack.map((tech, idx) => (
+                    <span key={idx} className="text-[11px] font-mono px-2.5 py-1 bg-[#F8FAFC] border border-[#E2E8F0] rounded text-[#64748B]">
+                      {tech}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
-            </div>
 
-            <div className="pt-6 border-t border-[#F1F5F9] flex flex-wrap gap-2">
-              {project.stack.map((tech, idx) => (
-                <span key={idx} className="text-[11px] font-medium px-2.5 py-1 bg-[#F8FAFC] border border-[#E2E8F0] rounded-md text-[#64748B]">
-                  {tech}
-                </span>
-              ))}
+              {/* Dominant Visual Preview Frame */}
+              <div className="lg:col-span-6">
+                <div className="bg-[#0F172A] text-white rounded-lg p-6 space-y-4 font-mono text-xs shadow-md">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <span className="text-slate-400 font-sans font-semibold">Lead Research Engine</span>
+                    <span className="text-emerald-400 text-[10px] px-2 py-0.5 bg-emerald-950 border border-emerald-800 rounded">Verification Active</span>
+                  </div>
+
+                  <div className="space-y-2 font-mono">
+                    <div className="p-3 bg-slate-900 rounded border border-slate-800 flex justify-between items-center">
+                      <span className="text-slate-400">Operating Status Signal:</span>
+                      <span className="text-slate-200 font-bold">Verified Operating</span>
+                    </div>
+                    <div className="p-3 bg-slate-900 rounded border border-slate-800 flex justify-between items-center">
+                      <span className="text-slate-400">Digital Ad Signal:</span>
+                      <span className="text-emerald-400 font-bold">Active Campaigns</span>
+                    </div>
+                    <div className="p-3 bg-slate-900 rounded border border-slate-800 flex justify-between items-center">
+                      <span className="text-slate-400">Routing Target:</span>
+                      <span className="text-slate-200 font-bold">CRM Webhook Pipeline</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 text-[11px] text-slate-400 font-sans flex justify-between">
+                    <span>Direct API Synchronization</span>
+                    <span className="text-slate-200 font-semibold">Live Integration</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
+
+          {/* Secondary Projects Side-by-Side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.slice(1).map((project) => (
+              <div
+                key={project.id}
+                className="bg-white border border-[#E2E8F0] rounded-xl p-7 space-y-5 flex flex-col justify-between hover:border-[#CBD5E1] transition-all"
+              >
+                <div className="space-y-3">
+                  <span className="text-[11px] font-semibold px-2.5 py-1 bg-[#F1F5F9] text-[#475569] rounded uppercase tracking-wider">
+                    {project.categoryLabel}
+                  </span>
+                  <h2 className="font-display text-xl font-bold text-[#0F172A]">
+                    {project.title}
+                  </h2>
+                  <p className="text-xs text-[#475569] leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="pt-2 space-y-1.5">
+                    <h3 className="text-[11px] font-bold uppercase tracking-wider text-[#64748B]">Deliverables</h3>
+                    {project.deliverables.map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs text-[#334155]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-[#F1F5F9] flex flex-wrap gap-1.5">
+                  {project.stack.map((tech, idx) => (
+                    <span key={idx} className="text-[10px] font-mono px-2 py-0.5 bg-[#F8FAFC] border border-[#E2E8F0] rounded text-[#64748B]">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-white border border-[#E2E8F0] rounded-xl p-8 space-y-6 flex flex-col justify-between hover:border-[#CBD5E1] transition-all"
+            >
+              <div className="space-y-4">
+                <span className="text-xs font-semibold px-2.5 py-1 bg-[#F1F5F9] text-[#475569] rounded uppercase tracking-wider">
+                  {project.categoryLabel}
+                </span>
+                <h2 className="font-display text-2xl font-bold text-[#0F172A]">
+                  {project.title}
+                </h2>
+                <p className="text-sm text-[#475569] leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="pt-2 space-y-2">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">Deliverables</h3>
+                  {project.deliverables.map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-xs text-[#334155]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-[#F1F5F9] flex flex-wrap gap-2">
+                {project.stack.map((tech, idx) => (
+                  <span key={idx} className="text-[11px] font-mono px-2.5 py-1 bg-[#F8FAFC] border border-[#E2E8F0] rounded text-[#64748B]">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Call to Action */}
-      <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-8 md:p-12 text-center space-y-4">
-        <h2 className="font-display text-2xl font-bold text-[#0F172A]">Have a similar project in mind?</h2>
-        <p className="text-sm text-[#475569] max-w-xl mx-auto">
-          We work with businesses to turn technical and commercial goals into high-performing digital assets.
-        </p>
+      <div className="bg-[#0F172A] text-white rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="space-y-1 max-w-xl">
+          <h2 className="font-display text-2xl font-bold text-white">Have a similar project in mind?</h2>
+          <p className="text-sm text-[#94A3B8]">We turn technical and commercial requirements into high-performing digital assets.</p>
+        </div>
         <button
           onClick={onOpenForm}
-          className="inline-flex items-center px-6 py-3 bg-[#0F172A] text-white text-xs font-semibold uppercase tracking-wider rounded-lg hover:bg-[#1E293B] transition-colors cursor-pointer"
+          className="px-7 py-3.5 bg-white text-[#0F172A] text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-[#F8FAFC] transition-colors cursor-pointer whitespace-nowrap"
         >
-          Start a Project →
+          Start a Project
         </button>
       </div>
     </div>
