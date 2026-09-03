@@ -37,23 +37,28 @@ export default function App() {
     };
   }, []);
 
-  // Sync hash to active tab on mount and popstate
+  // Sync path to active tab on mount and popstate
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '');
-      if (['home', 'services', 'work', 'about', 'contact'].includes(hash)) {
-        setActiveTab(hash);
+    const handlePopState = () => {
+      const path = window.location.pathname.replace(/^\/+/, '').toLowerCase();
+      if (['services', 'work', 'about', 'contact', 'home'].includes(path)) {
+        setActiveTab(path);
+      } else {
+        setActiveTab('home');
       }
     };
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    handlePopState();
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    window.location.hash = tab;
+    const targetPath = `/${tab}`;
+    if (window.location.pathname !== targetPath) {
+      window.history.pushState({}, '', targetPath);
+    }
   };
 
   // Modal ESC key listener

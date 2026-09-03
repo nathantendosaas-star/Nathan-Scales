@@ -10,14 +10,16 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'services', label: 'Services' },
-    { id: 'work', label: 'Work' },
-    { id: 'about', label: 'About' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Home', path: '/home' },
+    { id: 'services', label: 'Services', path: '/services' },
+    { id: 'work', label: 'Work', path: '/work' },
+    { id: 'about', label: 'About', path: '/about' },
+    { id: 'contact', label: 'Contact', path: '/contact' }
   ];
 
-  const handleNavClick = (id: string) => {
+  const handleNavClick = (id: string, e?: React.MouseEvent) => {
+    if (e && (e.ctrlKey || e.metaKey)) return;
+    if (e) e.preventDefault();
     setActiveTab(id);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -26,8 +28,9 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#FBFBF9]/90 backdrop-blur-md border-b border-[#E2E8F0]">
       <div className="max-w-[1300px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-        <button
-          onClick={() => handleNavClick('home')}
+        <a
+          href="/home"
+          onClick={(e) => handleNavClick('home', e)}
           className="flex items-center gap-3 text-left focus:outline-none cursor-pointer group"
         >
           <img
@@ -43,14 +46,15 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
               Studio
             </span>
           </div>
-        </button>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-[#475569]">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              onClick={() => handleNavClick(item.id)}
+              href={item.path}
+              onClick={(e) => handleNavClick(item.id, e)}
               className={`transition-colors duration-200 cursor-pointer ${
                 activeTab === item.id
                   ? 'text-[#0F172A] font-semibold border-b-2 border-[#0F172A] pb-1'
@@ -58,7 +62,7 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
               }`}
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </nav>
 
@@ -93,15 +97,16 @@ export default function Header({ activeTab, setActiveTab, onOpenForm }: HeaderPr
         <div className="md:hidden bg-[#FBFBF9] border-b border-[#E2E8F0] px-6 py-6 space-y-4">
           <div className="flex flex-col space-y-3">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.id}
-                onClick={() => handleNavClick(item.id)}
+                href={item.path}
+                onClick={(e) => handleNavClick(item.id, e)}
                 className={`text-left text-base font-medium py-2 transition-colors ${
                   activeTab === item.id ? 'text-[#0F172A] font-semibold' : 'text-[#475569]'
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
           <div className="pt-4 border-t border-[#E2E8F0]">

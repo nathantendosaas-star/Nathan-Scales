@@ -4,7 +4,9 @@ interface FooterProps {
 }
 
 export default function Footer({ setActiveTab, onOpenForm }: FooterProps) {
-  const handleNavClick = (id: string) => {
+  const handleNavClick = (id: string, e?: React.MouseEvent) => {
+    if (e && (e.ctrlKey || e.metaKey)) return;
+    if (e) e.preventDefault();
     setActiveTab(id);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -25,11 +27,11 @@ export default function Footer({ setActiveTab, onOpenForm }: FooterProps) {
         </div>
 
         <div className="flex flex-wrap gap-6 text-xs font-medium text-[#475569]">
-          <button onClick={() => handleNavClick('home')} className="hover:text-[#0F172A] transition-colors cursor-pointer">Home</button>
-          <button onClick={() => handleNavClick('services')} className="hover:text-[#0F172A] transition-colors cursor-pointer">Services</button>
-          <button onClick={() => handleNavClick('work')} className="hover:text-[#0F172A] transition-colors cursor-pointer">Work</button>
-          <button onClick={() => handleNavClick('about')} className="hover:text-[#0F172A] transition-colors cursor-pointer">About</button>
-          <button onClick={() => handleNavClick('contact')} className="hover:text-[#0F172A] transition-colors cursor-pointer">Contact</button>
+          <a href="/home" onClick={(e) => handleNavClick('home', e)} className="hover:text-[#0F172A] transition-colors cursor-pointer">Home</a>
+          <a href="/services" onClick={(e) => handleNavClick('services', e)} className="hover:text-[#0F172A] transition-colors cursor-pointer">Services</a>
+          <a href="/work" onClick={(e) => handleNavClick('work', e)} className="hover:text-[#0F172A] transition-colors cursor-pointer">Work</a>
+          <a href="/about" onClick={(e) => handleNavClick('about', e)} className="hover:text-[#0F172A] transition-colors cursor-pointer">About</a>
+          <a href="/contact" onClick={(e) => handleNavClick('contact', e)} className="hover:text-[#0F172A] transition-colors cursor-pointer">Contact</a>
           <button onClick={onOpenForm} className="hover:text-[#0F172A] transition-colors text-[#0F172A] font-semibold underline cursor-pointer">Start a Project</button>
         </div>
 

@@ -6,7 +6,9 @@ interface HomePageProps {
 }
 
 export default function HomePage({ onOpenForm, setActiveTab }: HomePageProps) {
-  const navigateTo = (tab: string) => {
+  const navigateTo = (tab: string, e?: React.MouseEvent) => {
+    if (e && (e.ctrlKey || e.metaKey)) return;
+    if (e) e.preventDefault();
     setActiveTab(tab);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -60,12 +62,13 @@ export default function HomePage({ onOpenForm, setActiveTab }: HomePageProps) {
                 >
                   Start a Project
                 </button>
-                <button
-                  onClick={() => navigateTo('work')}
+                <a
+                  href="/work"
+                  onClick={(e) => navigateTo('work', e)}
                   className="inline-flex items-center justify-center px-7 py-3.5 bg-white border border-[#E2E8F0] text-[#334155] font-medium text-sm rounded-md hover:bg-[#F8FAFC] hover:text-[#0F172A] transition-all duration-200 cursor-pointer"
                 >
                   View Work →
-                </button>
+                </a>
               </motion.div>
             </div>
 
@@ -160,12 +163,13 @@ export default function HomePage({ onOpenForm, setActiveTab }: HomePageProps) {
               Services
             </h2>
           </div>
-          <button
-            onClick={() => navigateTo('services')}
+          <a
+            href="/services"
+            onClick={(e) => navigateTo('services', e)}
             className="text-xs font-semibold text-[#0F172A] hover:underline cursor-pointer"
           >
             Full Capabilities Detail →
-          </button>
+          </a>
         </div>
 
         {/* Editorial Rows replacing repetitive card grid */}
@@ -230,19 +234,20 @@ export default function HomePage({ onOpenForm, setActiveTab }: HomePageProps) {
               Selected Work
             </h2>
           </div>
-          <button
-            onClick={() => navigateTo('work')}
+          <a
+            href="/work"
+            onClick={(e) => navigateTo('work', e)}
             className="text-xs font-semibold text-[#0F172A] hover:underline cursor-pointer"
           >
             View All Projects →
-          </button>
+          </a>
         </div>
 
         {/* Visual Scale Hierarchy: Featured Project + Secondary Projects */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Featured Dominant Project */}
           <div
-            onClick={() => navigateTo('work')}
+            onClick={(e) => navigateTo('work', e)}
             className="lg:col-span-7 bg-white border border-[#E2E8F0] rounded-xl p-8 space-y-6 cursor-pointer hover:border-[#CBD5E1] transition-all group"
           >
             <div className="flex items-center justify-between">
@@ -288,7 +293,7 @@ export default function HomePage({ onOpenForm, setActiveTab }: HomePageProps) {
           {/* Secondary Projects Column */}
           <div className="lg:col-span-5 space-y-6 flex flex-col justify-between">
             <div
-              onClick={() => navigateTo('work')}
+              onClick={(e) => navigateTo('work', e)}
               className="bg-white border border-[#E2E8F0] rounded-xl p-6 space-y-4 cursor-pointer hover:border-[#CBD5E1] transition-all group flex-1 flex flex-col justify-between"
             >
               <div>
@@ -309,7 +314,7 @@ export default function HomePage({ onOpenForm, setActiveTab }: HomePageProps) {
             </div>
 
             <div
-              onClick={() => navigateTo('work')}
+              onClick={(e) => navigateTo('work', e)}
               className="bg-white border border-[#E2E8F0] rounded-xl p-6 space-y-4 cursor-pointer hover:border-[#CBD5E1] transition-all group flex-1 flex flex-col justify-between"
             >
               <div>
@@ -354,12 +359,13 @@ export default function HomePage({ onOpenForm, setActiveTab }: HomePageProps) {
             >
               Start a Project
             </button>
-            <button
-              onClick={() => navigateTo('contact')}
+            <a
+              href="/contact"
+              onClick={(e) => navigateTo('contact', e)}
               className="px-7 py-3.5 border border-[#334155] text-white font-medium text-sm rounded-md hover:bg-[#1E293B] transition-colors text-center cursor-pointer"
             >
               Contact Details & Email
-            </button>
+            </a>
           </div>
         </div>
       </section>
