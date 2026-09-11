@@ -1,7 +1,7 @@
-1. Make landing page more attractive;
-fix cta
-fix placeholder images
-add 3 more pages
+1. Make landing page more attractive;✔
+fix cta✔
+fix placeholder images✔
+add 3 more pages✔
 
 2. New lead capture form
 Better graphics, probably custom form
