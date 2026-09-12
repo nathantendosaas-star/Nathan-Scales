@@ -6,7 +6,7 @@ Quick recap;
 4. 
 
 New Tasks:
->>> **Sign first client**
+> **Sign first client**
 > Reply to any responses then proceed to touch 2
 > Set up lead form to be primary client funnel
 > Set up simple github actions for running automated lead review from leads in google sheet
