@@ -3,9 +3,9 @@ fix cta✔
 fix placeholder images✔
 add 3 more pages✔
 
-2. New lead capture form
-Better graphics, probably custom form
-More on-boarding questions
+2. New lead capture form ✔ (improved not new)
+Better graphics, probably custom form------X
+More on-boarding questions ✔
 On form submission, a RESEND email is sent to each lead to establish communication
 It should be like a showcase to the incoming leads.
 Connect to google sheet and then google sheet. 
