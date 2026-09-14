@@ -1,0 +1,71 @@
+do u know brezscales
+
+Yeah — Brez (@brezscales) is a social media personality/entrepreneur known for content about paid ads, brand scaling, and a flashy lifestyle (cars, travel). He's got a big following across TikTok (~1.1M), Instagram (~1M), and X, plus a YouTube channel, and pushes a free "AI advertising" course as a lead magnet describing himself as running ads for businesses and documenting his lifestyle. 
+YouTube
+TikTok
+
+Worth noting: he's often described as a paid traffic specialist and social media personality known for content about digital marketing, brand scaling, and a flashy "lifestyle" persona built around cars, travel, and personal branding, but there's also skepticism out there — some commenters have called him a scammer, accusing him of selling the "dream" more than teaching real skills, and questioning whether the luxury persona reflects verified business performance. So if you're looking at his course specifically, it's the classic "high-ticket guru" territory — worth digging for independent proof of results rather than just taking the lifestyle content at face value. 
+Potionads
+Potionads
+
+Is there a specific reason you're asking — thinking about his course, or something else?
+
+but he does teach, i have seen that, some people just want silver plater. also the flashy lifestyle is marketing for him, i want you to do a deepdive on his strategy. how he gets clients to run ads for (since i am also starting a marketing agency), how he gets people to his course (which he used to sell but stopped), then how he makes money from his new free go-ai-advertiser (where does he make the cut).
+Things to look out for;
+
+He runs Brandlab (IG) formerly Brez marketing. (Ps. the brandlab websites are not related, he has no website for Brandlab, only instagram).
+https://go.ai-advertiser.com for the ai advertiser.
+
+Alright, did the deep dive. Quick note upfront: his real name is Bergen Resnick — "Brez Scales" is the persona. Here's how the whole machine works, broken into the three parts you asked about.
+
+1. How he lands agency clients (Brandlab)
+
+The agency side is actually the least "marketed" part of his business — it runs almost entirely on proof-of-concept from his personal brand rather than its own outreach engine.
+
+The origin model was pure warm outreach, not cold prospecting. He built his first version of the business by reaching out to people in his existing network — clothing brands he already knew — offering to run their ads for a percentage of profit instead of a flat fee. That became his first real business.
+The offer itself removes the client's risk. He doesn't pitch a retainer — he pitches performance-based/rev-share. That's the actual unlock: a business owner who's never heard of you says yes much faster to "I only get paid if you make more money" than to "pay me $3k/month."
+Brandlab has no separate acquisition funnel — it free-rides on his personal brand's reach. As you noted, Brandlab has no website, only an Instagram, and his other agency handle (@brezmarketing) is a bare 37K-follower page whose entire bio is an invitation to apply to work with them, nothing else. That's deliberate minimalism: the personal brand (millions of followers across platforms) does the trust-building, and the agency account is just a clean landing point for "apply." 
+Instagram
+The rebrand from Brez Marketing → Brand Lab appears to be a brand-separation move. Keeping the service brand (Brandlab) distinct from the personal/education brand (Brez Scales) protects the agency's reputation if the course/persona side ever takes a credibility hit — and vice versa.
+The proof point on his old agency site is a single ratio, not a case-study wall: "On average every $10 spent with us is $50 in revenue." That's the whole pitch — one memorable number instead of a portfolio. 
+Brez Marketing
+
+So: client acquisition for the actual ad-running business is basically inbound via content, filtered through a rev-share offer. He doesn't cold-DM businesses at scale — his audience DMs him.
+
+2. The old course funnel (before he stopped selling directly)
+
+This is the part reviewers map out in detail as a classic 3-stage funnel:
+
+TOFU (top): Short-form lifestyle content — cars, penthouses, the "young entrepreneur" identity — on TikTok/IG. This isn't the product, it's the hook that gets attention and builds an aspirational authority figure.
+MOFU (middle): Long-form YouTube vlogs, free webinars, email sequences pitching the low-ticket Brand Scaling Bootcamp ($47–97, a 5-day live training).
+BOFU (bottom): VSLs, retargeting, and group sales calls closing people into the high-ticket Elite Round Table (~$4,800, invite-only, positioned as exclusive rather than priced publicly).
+
+There was also a middle-tier Scale 2.0 (~$997) and a genius low-cost distribution hack: Brez Clips — a free-to-$49 program where fans get paid per view/click to re-post his content on their own TikTok/IG. This effectively crowdsourced his marketing, costing him almost nothing while keeping his brand in front of millions of aspirational young viewers around the clock. Reviewers note the payouts to clippers are inconsistent and some call that program itself a scam — worth flagging since it's the part most likely to burn people on his own audience.
+
+Worth being skeptical here too: multiple reviewers say the Bootcamp mainly functions as a sales pitch for ERT rather than a standalone training, and refund requests have reportedly been denied even where a refund policy exists.
+
+3. The new go-ai-advertiser.com funnel — where the actual money is now
+
+This is the interesting part, and it's a genuine evolution, not just a rebrand.
+
+The front end really is free — go.ai-advertiser.com is a lead-gen page/webinar registration (a live class pitched as showing beginners, in 60 minutes, how to get into AI advertising), fed by every YouTube description and TikTok bio link. No paywall at this stage. 
+AI Advertiser
+
+But it funnels straight into a paid program that still exists — it just isn't sold as "the course" anymore. That's AI Advertiser Accelerator / ai-advertiser.com, run through Whop, with named coaches (Giuseppe, Rodrigo, Smits, Chris, Marisa, Iris) and a real price that isn't publicly listed — the reviewed price "varies depending on the plan/package you choose," with a 90-day conditional refund guarantee. So "free" only describes the top-of-funnel webinar; the actual education/mentorship product behind it is still paid, just gated behind an application/sales call instead of a checkout page.
+
+Here's the real answer to "where does he make the cut": the model shifted from course-fee-only to a SaaS attach. Students are taught to run their client work through his proprietary tool, AdLevel (AdLevel.ai) — a $197/month tool that one-click-connects to a client's Meta ad account, auto-generates ad creative and headlines via its "Athena" feature, and re-optimizes spend every 15 minutes. That's the mechanism worth stealing conceptually: instead of one $4,800 payment, he built mandatory recurring software revenue into the curriculum itself — so he keeps getting paid monthly even after someone stops buying new courses. That's the "cut" — not an affiliate commission on ad spend, but a subscription toll on the tool he requires students to use to fulfill client work.
+
+Layer on top: digital info-products carry roughly 95% margin with zero fulfillment cost, and Whop reports over 55,000 students have gone through his portal — so even a tiny free→paid conversion rate on that scale is a lot of money before AdLevel is even counted.
+
+Reality check
+
+Independent reviewers rate this mixed-to-skeptical (one gives it 2.8/5), and the core criticism matters for your own thinking: the freelance-ad-agency model he teaches was strong from 2018–2022 when competition was low, but by 2026 it's saturated — businesses that used to pay $3-5k/month now have dozens of options at $500-1,000, and landing clients increasingly requires case studies beginners don't have yet. His own revenue claims ($400–700K/month) come from a self-reported interview with no independent verification, and there's active "is this a scam" chatter on Reddit alongside genuinely positive Whop/Trustpilot reviews from students — take both sides with a grain of salt since Whop reviewers have a financial incentive to defend a purchase they just made.
+
+What actually transfers to your agency
+
+A few structural patterns here are genuinely useful regardless of what you think of him personally:
+
+Rev-share/performance pricing lowers the barrier to a first "yes" far more than a flat retainer — especially for a new agency with no case studies yet.
+Separate your service brand from your personal/content brand. Your Nathan Scales carousel series is already doing the personal-brand-content-funnel thing — worth deciding now whether "Nathan Scales" stays as one brand or splits into a personal authority account + a clean-looking agency account the way Brandlab is separated from @brezscales.
+A free front-end into a recurring-revenue backend beats a one-time fee. If you ever productize what you teach or build (landing page templates, lead-capture systems), the AdLevel move — bake a subscription tool into the deliverable itself — is the more durable model than a single course sale.
+One sharp proof number beats a portfolio wall. "$10 in, $50 out" is more memorable and skimmable than a case-study page.
