@@ -19,4 +19,4 @@
 ### Strategy & Development
 * **Research new leads** focusing on a different niche within the construction industry.
 * **Website update** to change the description to all-around marketing (by niche) while maintaining the same services.
-* **Jarvis integration** into Nathan Scales using a lighter version of Jarvis.
+* **Jarvis integration** into Nathan Scales using a lighter version of Jarvis (my personal Agency OS).
